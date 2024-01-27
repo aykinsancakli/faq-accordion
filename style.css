@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: rgb(255, 255, 255);
+  --light-pink: rgb(249, 240, 255);
+  --grayish-purple: rgb(140, 105, 145);
+  --dark-purple: rgb(47, 21, 51);
+}
+
+html {
+  /* 10 / 16 */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--light-pink);
+
+  background-image: url(assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--dark-purple);
+}
+
+.accordion {
+  max-width: 60rem;
+  padding: 3.2rem;
+  background-color: #fff;
+  border-radius: 11px;
+}
+
+.accordion-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  margin-bottom: 2.4rem;
+}
+
+.heading-primary {
+  font-size: 5rem;
+}
+
+.question-box {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2.4rem;
+  padding: 2.4rem 0;
+}
+
+.question-box:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.question:hover,
+.question:active .question-text {
+  color: #ad28eb;
+}
+
+.question-text {
+  font-weight: 600;
+}
+
+.answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0.3;
+
+  transition: opacity 0.8s ease, max-height 0.3s ease;
+}
+
+.answer-text {
+  line-height: 1.6;
+  color: var(--grayish-purple);
+  padding-top: 1.2rem;
+}
+
+.open .answer {
+  max-height: 30rem;
+  opacity: 1;
+}
+
+/* QUERIES */
+
+@media (max-width: 41em) {
+  body {
+    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .accordion {
+    margin: 0 2.4rem;
+    padding: 2.4rem;
+  }
+
+  .question:hover,
+  .question:active .question-text {
+    color: var(--dark-purple);
+  }
+}
+
+@media (max-width: 34em) {
+  .question-text {
+    max-width: 22rem;
+  }
+}
