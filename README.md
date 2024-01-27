@@ -1,4 +1,4 @@
-# FAQ Accordion Project
+# Frontend Mentor - FAQ Accordion Project
 
 Project Overview
 
