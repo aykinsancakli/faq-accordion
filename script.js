@@ -16,5 +16,3 @@ questionBox.forEach((qbox) => {
     }
   });
 });
-
-// NOTES: Remember we can select elements not only from document.querySelector but also starting from a specific element like in this example qbox.querySelector => only the svg element child of the current question box element.
